@@ -15,15 +15,10 @@
   flex-wrap: wrap;
 }
 
-.navbar-logo {
-  color: #f3f4f6;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.navbar-logo span {
-  color: #38bdf8;
+.navbar-logos {
+  /* Ocupa o espaço livre à esquerda e encolhe sem empurrar o botão do menu */
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .menu-toggle {
@@ -73,8 +68,8 @@
   background-color: rgba(56, 189, 248, 0.12);
 }
 
-/* Adaptação para Celulares e Tablets */
-@media (max-width: 768px) {
+/* Adaptação para Celulares e Tablets (menu recolhido até 1100px) */
+@media (max-width: 1100px) {
   .menu-toggle {
     display: inline-flex;
   }

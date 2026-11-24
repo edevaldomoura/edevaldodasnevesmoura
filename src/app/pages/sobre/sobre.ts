@@ -10,9 +10,10 @@ export class SobreComponent implements OnInit {
   private seoService = inject(SeoService);
 
   ngOnInit(): void {
-    this.seoService.atualizarMetaTags(
-      'Conheça o perfil técnico multidisciplinar de Edevaldo das Neves Moura: Desenvolvimento Web, Mobile e Desktop, Servidores Linux/Windows, Cloud AWS/Azure/GCP e Segurança da Informação.',
-      '/sobre/'
-    );
+    this.seoService.atualizarMetaTags({
+      titulo: 'Sobre & Especialidades | Edevaldo das Neves Moura',
+      descricao: 'Conheça o perfil técnico multidisciplinar de Edevaldo das Neves Moura: Desenvolvimento Web, Mobile e Desktop, Servidores Linux/Windows, Cloud AWS/Azure/GCP e Segurança da Informação.',
+      rota: '/sobre/'
+    });
   }
 }

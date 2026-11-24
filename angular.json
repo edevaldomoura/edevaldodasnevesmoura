@@ -31,7 +31,7 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": ["edevaldodasnevesmoura.com.br", "www.edevaldodasnevesmoura.com.br", "localhost"]
             },
             "ssr": {
               "entry": "src/server.ts"

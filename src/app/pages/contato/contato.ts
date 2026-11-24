@@ -10,9 +10,10 @@ export class ContatoComponent implements OnInit {
   private seoService = inject(SeoService);
 
   ngOnInit(): void {
-    this.seoService.atualizarMetaTags(
-      'Canais oficiais de contato de Edevaldo das Neves Moura, Analista de Sistemas e Desenvolvedor Full Stack. Conecte-se via e-mail, LinkedIn ou GitHub.',
-      '/contato/'
-    );
+    this.seoService.atualizarMetaTags({
+      titulo: 'Contato | Edevaldo das Neves Moura - Analista de Sistemas',
+      descricao: 'Canais oficiais de contato de Edevaldo das Neves Moura, Analista de Sistemas e Desenvolvedor Full Stack. Conecte-se via e-mail, LinkedIn ou GitHub.',
+      rota: '/contato/'
+    });
   }
 }

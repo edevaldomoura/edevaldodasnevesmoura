@@ -25,3 +25,11 @@ Este projeto é o currículo oficial e portfólio profissional de **Edevaldo das
 ## 3. Fluxo de Trabalho e Validação (SDD)
 - Antes de concluir qualquer alteração estrutural, valide se o build estático (`npm run build`) executa sem erros e se os arquivos continuam sendo gerados corretamente em `dist/edevaldodasnevesmoura/browser`.
 - Mantenha a consistência de dados profissionais: **20 anos de atuação em TI**, Analista de Sistemas, AI-First Developer, Full Stack, DevOps, Cloud, DBA, Data Analyst, Pentester e DPO.
+
+## 4. Logos de Tecnologia na Navbar
+- A linha de logos (substitui o antigo texto do logotipo) é o componente `app-logos-tecnologia` em `src/app/components/logos-tecnologia/`.
+- Para adicionar uma plataforma, inclua **um item** em `logos-tecnologia.data.ts` (`id`, `nome`, `rotulo`, `url` https, `viewBox`, `caminho` do SVG e, opcionalmente, `corHover`). Não crie componente novo nem importe biblioteca de ícones.
+- Use sempre ícones de **um único `<path>`** preenchidos com `currentColor`, e `rotulo` no formato "<Plataforma> de Edevaldo das Neves Moura" (texto acessível, lido também por rastreadores).
+- Logos de **perfis** (GitHub, LinkedIn etc.) usam apenas URLs reais do proprietário, e esses mesmos perfis devem constar em `sameAs` do JSON-LD do `index.html`.
+- Logos de **tecnologias** (C#, Angular, PostgreSQL etc.) apontam para o site oficial da tecnologia, usam o `rotulo` "<Tecnologia>, tecnologia usada por Edevaldo das Neves Moura" e o `caminho` SEMPRE extraído do pacote Simple Icons (CC0), nunca desenhado à mão.
+

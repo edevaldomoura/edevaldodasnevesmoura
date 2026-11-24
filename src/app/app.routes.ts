@@ -4,6 +4,7 @@ import { SobreComponent } from './pages/sobre/sobre';
 import { ExperienciaComponent } from './pages/experiencia/experiencia';
 import { FormacaoComponent } from './pages/formacao/formacao';
 import { ContatoComponent } from './pages/contato/contato';
+import { NaoEncontradoComponent } from './pages/nao-encontrado/nao-encontrado';
 
 export const routes: Routes = [
   {
@@ -33,6 +34,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '',
+    component: NaoEncontradoComponent,
+    title: 'Página Não Encontrada | Edevaldo das Neves Moura',
   },
 ];

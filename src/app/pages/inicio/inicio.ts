@@ -12,9 +12,11 @@ export class InicioComponent implements OnInit {
   private seoService = inject(SeoService);
 
   ngOnInit(): void {
-    this.seoService.atualizarMetaTags(
-      'Currículo oficial e portfólio de Edevaldo das Neves Moura, Analista de Sistemas 20 anos de atuação, AI-First Developer, DevOps, DBA e Pentester, com formação superior, Desenvolvedor Full Stack, Especialista Cloud, DBA e Segurança da Informação.',
-      '/'
-    );
+    this.seoService.atualizarMetaTags({
+      titulo: 'Edevaldo das Neves Moura | Analista de Sistemas & Full Stack',
+      descricao: 'Currículo oficial e portfólio de Edevaldo das Neves Moura, Analista de Sistemas com 20 anos de atuação, AI-First Developer, DevOps, DBA e Pentester, Desenvolvedor Full Stack, Especialista Cloud e Segurança da Informação.',
+      rota: '/',
+      tipo: 'profile'
+    });
   }
 }

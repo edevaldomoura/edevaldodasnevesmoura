@@ -1,0 +1,25 @@
+<ul class="logos" aria-label="Perfis e plataformas">
+  @for (logo of logos; track logo.id) {
+    <li>
+      <a
+        class="logo-link"
+        [href]="logo.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        [attr.title]="logo.nome"
+        [style.--cor-hover]="logo.corHover ?? null"
+      >
+        <svg
+          class="logo-icone"
+          [attr.viewBox]="logo.viewBox"
+          fill="currentColor"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path [attr.d]="logo.caminho"></path>
+        </svg>
+        <span class="sr-only">{{ logo.rotulo }}</span>
+      </a>
+    </li>
+  }
+</ul>

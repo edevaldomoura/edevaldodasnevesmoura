@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { LogosTecnologiaComponent } from '../logos-tecnologia/logos-tecnologia';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, LogosTecnologiaComponent],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })

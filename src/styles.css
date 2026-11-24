@@ -248,3 +248,52 @@ nav a.active {
 .zoom-btn-fullscreen{gap:.35rem;border-color:rgba(56,189,248,.35);color:#38bdf8}
 .zoom-btn-fullscreen:hover{background:rgba(56,189,248,.1);border-color:#38bdf8}
 
+
+/* ─── Página 404 ─────────────────────────────────────────────────────────── */
+.nao-encontrado-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.nao-encontrado-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nao-encontrado-container h1 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.nao-encontrado-container p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.btn-home {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.75rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+
+.btn-home:hover {
+  background: rgba(56,189,248,.12);
+  color: #fff;
+}

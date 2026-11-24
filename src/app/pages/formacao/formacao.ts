@@ -355,10 +355,11 @@ export class FormacaoComponent implements OnInit {
   diplomaAtivo = signal<CertificadoItem | null>(null);
 
   ngOnInit(): void {
-    this.seoService.atualizarMetaTags(
-      'Formação acadêmica em Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul, cursos técnicos e competências em Engenharia de Software, DevOps e Metodologias Ágeis.',
-      '/formacao/'
-    );
+    this.seoService.atualizarMetaTags({
+      titulo: 'Formação Acadêmica & Habilidades | Edevaldo das Neves Moura',
+      descricao: 'Formação acadêmica em Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul, cursos técnicos e competências em Engenharia de Software, DevOps e Metodologias Ágeis.',
+      rota: '/formacao/'
+    });
   }
 
   abrirModal(item: CertificadoItem): void {

@@ -1,10 +1,10 @@
 # Edevaldo das Neves Moura
 
-> Currículo oficial e portfólio de Edevaldo das Neves Moura, Analista de Sistemas com 20 anos de atuação e suas especialidades em AI-First, SDD, DevOps, Cloud, DBA e Pentest. com formação superior, Desenvolvedor Full Stack, Administrador de Bancos de Dados (DBA), Especialista em Infraestrutura/Cloud e Segurança da Informação (DPO) em São Paulo - SP.
+> Currículo oficial e portfólio de Edevaldo das Neves Moura, Analista de Sistemas com 20 anos de atuação e especialidades em AI-First, SDD, DevOps, Cloud, DBA e Pentest. Formação superior, Desenvolvedor Full Stack, Administrador de Bancos de Dados (DBA), Especialista em Infraestrutura/Cloud e Segurança da Informação (DPO) em São Paulo - SP.
 
 ## Páginas Principais
 - [Início](https://edevaldodasnevesmoura.com.br/): Visão geral das especialidades e resumo profissional.
 - [Sobre](https://edevaldodasnevesmoura.com.br/sobre/): Stack tecnológica completa em Desenvolvimento Web, Mobile, Desktop, ERPs TOTVS, Infraestrutura, Cloud e Segurança.
-- [Experiência Profissional](https://edevaldodasnevesmoura.com.br/experiencia/): Histórico de 14 anos de atuação como Analista de Sistemas, Desenvolvedor e Professor de Tecnologia.
+- [Experiência Profissional](https://edevaldodasnevesmoura.com.br/experiencia/): Histórico de 20 anos de atuação como Analista de Sistemas, Desenvolvedor e Professor de Tecnologia.
 - [Formação Acadêmica](https://edevaldodasnevesmoura.com.br/formacao/): Graduação Superior em Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul e especializações.
 - [Contato](https://edevaldodasnevesmoura.com.br/contato/): Canais oficiais de contato, LinkedIn e GitHub.
