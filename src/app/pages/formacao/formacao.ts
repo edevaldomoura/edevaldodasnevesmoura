@@ -21,6 +21,9 @@ export interface CertificadoItem {
 
 export type DiplomaItem = CertificadoItem;
 
+/** Arquivo-modelo usado enquanto o certificado real não é publicado. */
+const IMAGEM_MODELO = 'exemplo.jpg';
+
 @Component({
   selector: 'app-formacao',
   standalone: true,
@@ -348,6 +351,11 @@ export class FormacaoComponent implements OnInit {
       altText: 'Certificado Datilografia - Núcleo Cultural Santo Expedito'
     }
   ];
+
+  /** Só exibe a imagem quando ela é real (não o arquivo-modelo). */
+  temImagem(item: CertificadoItem | null | undefined): boolean {
+    return !!item?.imagemUrl && !item.imagemUrl.endsWith(IMAGEM_MODELO);
+  }
 
   modalAberto = signal(false);
   lightboxAberto = signal(false);

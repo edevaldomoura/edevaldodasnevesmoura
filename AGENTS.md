@@ -30,7 +30,7 @@ Este projeto é o currículo oficial e portfólio profissional de **Edevaldo das
 - A linha de logos (substitui o antigo texto do logotipo) é o componente `app-logos-tecnologia` em `src/app/components/logos-tecnologia/`.
 - Para adicionar uma plataforma, inclua **um item** em `logos-tecnologia.data.ts` (`id`, `nome`, `rotulo`, `url` https, `viewBox`, `caminho` do SVG e, opcionalmente, `corHover`). Não crie componente novo nem importe biblioteca de ícones.
 - Use sempre ícones de **um único `<path>`** preenchidos com `currentColor`, e `rotulo` curto (nome da plataforma). Somente os logos de PERFIS do proprietário (GitHub, LinkedIn) usam o formato "<Plataforma> de Edevaldo das Neves Moura"; nunca repita o nome completo nos rótulos das tecnologias (evita texto oculto repetitivo).
-- Logos de **perfis** (GitHub, LinkedIn etc.) usam apenas URLs reais do proprietário, e esses mesmos perfis devem constar em `sameAs` do JSON-LD do `index.html`.
+- Logos de **perfis** (GitHub, LinkedIn etc.) usam apenas URLs reais do proprietário, e esses mesmos perfis devem constar em `sameAs` do JSON-LD do `index.html`. O ícone do LinkedIn vem do Bootstrap Icons (licença MIT), pois o Simple Icons não o possui mais; mantenha o comentário de licença no item.
 - Logos de **tecnologias** (C#, Angular, PostgreSQL etc.) apontam para o site oficial da tecnologia, usam como `rotulo` apenas o nome da tecnologia e o `caminho` SEMPRE extraído do pacote Simple Icons (CC0), nunca desenhado à mão.
 
 ## 5. Regras de SEO adicionais
@@ -39,3 +39,5 @@ Este projeto é o currículo oficial e portfólio profissional de **Edevaldo das
 - Páginas sem URL canônica (404) usam `comCanonical: false` no `atualizarMetaTags`.
 - `public/404.html` é obrigatório: sem ele o Cloudflare Pages trata o site como SPA e responde 200 com a home para URLs inexistentes. Nunca o inclua no sitemap.
 - Em português, evite listas de cargos em inglês em títulos de seção (`<h2>`); use uma frase única.
+- **URLs com barra final:** o canonical, o `og:url` e o sitemap usam `/sobre/`, e a Cloudflare Pages redireciona `/sobre` para `/sobre/` (308). Por isso `TrailingSlashUrlSerializer` (registrado em `app.config.ts`) faz os `routerLink` saírem com barra final. Nunca remova o serializador sem padronizar todas as URLs de novo.
+- **Certificados:** `imagemUrl: 'exemplo.jpg'` é o arquivo-modelo e NÃO é exibido (`FormacaoComponent.temImagem`). Para publicar um certificado, salve a imagem real (com dados sensíveis tarjados) em `public/img/` e aponte `imagemUrl` para ela.
