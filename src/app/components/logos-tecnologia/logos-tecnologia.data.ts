@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Fonte única dos logos exibidos na barra de navegação.
  *
  * Para adicionar uma plataforma, basta incluir um novo item no final da lista.
@@ -35,7 +35,7 @@ export const LOGOS_TECNOLOGIA: readonly LogoTecnologia[] = [
   {
     id: 'dotnet',
     nome: '.NET',
-    rotulo: '.NET, plataforma usada por Edevaldo das Neves Moura',
+    rotulo: '.NET',
     url: 'https://dotnet.microsoft.com',
     viewBox: '0 0 24 24',
     caminho:
@@ -45,7 +45,7 @@ export const LOGOS_TECNOLOGIA: readonly LogoTecnologia[] = [
   {
     id: 'angular',
     nome: 'Angular',
-    rotulo: 'Angular, tecnologia usada por Edevaldo das Neves Moura',
+    rotulo: 'Angular',
     url: 'https://angular.dev',
     viewBox: '0 0 24 24',
     caminho:
@@ -55,7 +55,7 @@ export const LOGOS_TECNOLOGIA: readonly LogoTecnologia[] = [
   {
     id: 'postgresql',
     nome: 'PostgreSQL',
-    rotulo: 'PostgreSQL, tecnologia usada por Edevaldo das Neves Moura',
+    rotulo: 'PostgreSQL',
     url: 'https://www.postgresql.org',
     viewBox: '0 0 24 24',
     caminho:
@@ -65,7 +65,7 @@ export const LOGOS_TECNOLOGIA: readonly LogoTecnologia[] = [
   {
     id: 'docker',
     nome: 'Docker',
-    rotulo: 'Docker, tecnologia usada por Edevaldo das Neves Moura',
+    rotulo: 'Docker',
     url: 'https://www.docker.com',
     viewBox: '0 0 24 24',
     caminho:
@@ -75,7 +75,7 @@ export const LOGOS_TECNOLOGIA: readonly LogoTecnologia[] = [
   {
     id: 'linux',
     nome: 'Linux',
-    rotulo: 'Linux, tecnologia usada por Edevaldo das Neves Moura',
+    rotulo: 'Linux',
     url: 'https://www.linux.org',
     viewBox: '0 0 24 24',
     caminho:
@@ -85,7 +85,7 @@ export const LOGOS_TECNOLOGIA: readonly LogoTecnologia[] = [
   {
     id: 'googlecloud',
     nome: 'Google Cloud',
-    rotulo: 'Google Cloud (GCP), tecnologia usada por Edevaldo das Neves Moura',
+    rotulo: 'Google Cloud',
     url: 'https://cloud.google.com',
     viewBox: '0 0 24 24',
     caminho:

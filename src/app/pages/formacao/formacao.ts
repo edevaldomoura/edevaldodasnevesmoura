@@ -357,7 +357,7 @@ export class FormacaoComponent implements OnInit {
   ngOnInit(): void {
     this.seoService.atualizarMetaTags({
       titulo: 'Formação Acadêmica & Habilidades | Edevaldo das Neves Moura',
-      descricao: 'Formação acadêmica em Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul, cursos técnicos e competências em Engenharia de Software, DevOps e Metodologias Ágeis.',
+      descricao: 'Formação de Edevaldo das Neves Moura: Tecnólogo em Análise e Desenvolvimento de Sistemas (Unicsul) e cursos em DevOps, Linux, segurança e bancos de dados.',
       rota: '/formacao/'
     });
   }

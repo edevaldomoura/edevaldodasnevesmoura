@@ -29,7 +29,13 @@ Este projeto é o currículo oficial e portfólio profissional de **Edevaldo das
 ## 4. Logos de Tecnologia na Navbar
 - A linha de logos (substitui o antigo texto do logotipo) é o componente `app-logos-tecnologia` em `src/app/components/logos-tecnologia/`.
 - Para adicionar uma plataforma, inclua **um item** em `logos-tecnologia.data.ts` (`id`, `nome`, `rotulo`, `url` https, `viewBox`, `caminho` do SVG e, opcionalmente, `corHover`). Não crie componente novo nem importe biblioteca de ícones.
-- Use sempre ícones de **um único `<path>`** preenchidos com `currentColor`, e `rotulo` no formato "<Plataforma> de Edevaldo das Neves Moura" (texto acessível, lido também por rastreadores).
+- Use sempre ícones de **um único `<path>`** preenchidos com `currentColor`, e `rotulo` curto (nome da plataforma). Somente os logos de PERFIS do proprietário (GitHub, LinkedIn) usam o formato "<Plataforma> de Edevaldo das Neves Moura"; nunca repita o nome completo nos rótulos das tecnologias (evita texto oculto repetitivo).
 - Logos de **perfis** (GitHub, LinkedIn etc.) usam apenas URLs reais do proprietário, e esses mesmos perfis devem constar em `sameAs` do JSON-LD do `index.html`.
-- Logos de **tecnologias** (C#, Angular, PostgreSQL etc.) apontam para o site oficial da tecnologia, usam o `rotulo` "<Tecnologia>, tecnologia usada por Edevaldo das Neves Moura" e o `caminho` SEMPRE extraído do pacote Simple Icons (CC0), nunca desenhado à mão.
+- Logos de **tecnologias** (C#, Angular, PostgreSQL etc.) apontam para o site oficial da tecnologia, usam como `rotulo` apenas o nome da tecnologia e o `caminho` SEMPRE extraído do pacote Simple Icons (CC0), nunca desenhado à mão.
 
+## 5. Regras de SEO adicionais
+- `descricao` de cada página: no máximo 155 caracteres, com o nome "Edevaldo das Neves Moura".
+- O JSON-LD global (Person e WebSite) fica no `src/index.html`. O `ProfilePage` é injetado SOMENTE na home pelo `SeoService.adicionarProfilePage()` e removido no `ngOnDestroy`.
+- Páginas sem URL canônica (404) usam `comCanonical: false` no `atualizarMetaTags`.
+- `public/404.html` é obrigatório: sem ele o Cloudflare Pages trata o site como SPA e responde 200 com a home para URLs inexistentes. Nunca o inclua no sitemap.
+- Em português, evite listas de cargos em inglês em títulos de seção (`<h2>`); use uma frase única.

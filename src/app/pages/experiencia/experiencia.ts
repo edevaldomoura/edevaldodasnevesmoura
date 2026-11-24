@@ -12,7 +12,7 @@ export class ExperienciaComponent implements OnInit {
   ngOnInit(): void {
     this.seoService.atualizarMetaTags({
       titulo: 'Experiência Profissional | Edevaldo das Neves Moura',
-      descricao: 'Experiência profissional de Edevaldo das Neves Moura: 20 anos atuando como Analista de Sistemas, implantação de ERP TOTVS Protheus e RM, DBA, Cloud AWS e Docência em Tecnologia.',
+      descricao: 'Experiência de Edevaldo das Neves Moura: 20 anos como Analista de Sistemas, com ERPs TOTVS Protheus e RM, DBA, Cloud e docência em tecnologia.',
       rota: '/experiencia/'
     });
   }

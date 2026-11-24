@@ -17,7 +17,8 @@ export class NaoEncontradoComponent implements OnInit {
     this.seoService.atualizarMetaTags({
       titulo: 'Página Não Encontrada | Edevaldo das Neves Moura',
       descricao: 'Esta página não existe. Volte para o portfólio oficial de Edevaldo das Neves Moura.',
-      rota: '/404'
+      rota: '/404',
+      comCanonical: false
     });
     this.meta.updateTag({ name: 'robots', content: 'noindex, nofollow' });
   }

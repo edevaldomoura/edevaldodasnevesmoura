@@ -29,6 +29,11 @@ describe('LogosTecnologiaComponent', () => {
     expect(fixture.nativeElement.textContent).toContain('GitHub de Edevaldo das Neves Moura');
   });
 
+  it('cita o nome completo em no máximo 2 rótulos (evita repetição oculta)', () => {
+    const comNome = LOGOS_TECNOLOGIA.filter((l) => l.rotulo.includes('Edevaldo das Neves Moura'));
+    expect(comNome.length).toBeLessThanOrEqual(2);
+  });
+
   it('possui ids únicos e caminhos válidos com mais de 50 caracteres iniciando com M ou m', () => {
     const ids = LOGOS_TECNOLOGIA.map((l) => l.id);
     const idsUnicos = new Set(ids);
