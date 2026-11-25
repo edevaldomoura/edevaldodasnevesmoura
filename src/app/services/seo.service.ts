@@ -4,14 +4,12 @@ import { DOCUMENT } from '@angular/common';
 
 const BASE_URL = 'https://edevaldodasnevesmoura.com.br';
 const SITE_NAME = 'Edevaldo das Neves Moura';
-const DEFAULT_IMAGE = `${BASE_URL}/img/og-image.jpg`;
 const PROFILE_PAGE_ID = 'ld-profilepage';
 
 export interface SeoOptions {
   titulo: string;
   descricao: string;
   rota: string;
-  imagem?: string;
   tipo?: string;
   /** Use false em páginas sem URL canônica (ex.: 404): remove canonical e og:url. */
   comCanonical?: boolean;
@@ -27,7 +25,6 @@ export class SeoService {
 
   atualizarMetaTags(opts: SeoOptions): void {
     const urlCompleta = `${BASE_URL}${opts.rota}`;
-    const imagem = opts.imagem ?? DEFAULT_IMAGE;
     const tipo = opts.tipo ?? 'website';
     const comCanonical = opts.comCanonical ?? true;
 
@@ -43,16 +40,11 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:type', content: tipo });
     this.meta.updateTag({ property: 'og:site_name', content: SITE_NAME });
     this.meta.updateTag({ property: 'og:locale', content: 'pt_BR' });
-    this.meta.updateTag({ property: 'og:image', content: imagem });
-    this.meta.updateTag({ property: 'og:image:width', content: '1200' });
-    this.meta.updateTag({ property: 'og:image:height', content: '630' });
-    this.meta.updateTag({ property: 'og:image:alt', content: `${SITE_NAME} - Analista de Sistemas` });
 
     // Twitter Card
-    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
     this.meta.updateTag({ name: 'twitter:title', content: opts.titulo });
     this.meta.updateTag({ name: 'twitter:description', content: opts.descricao });
-    this.meta.updateTag({ name: 'twitter:image', content: imagem });
 
     // Canonical + og:url
     if (comCanonical) {

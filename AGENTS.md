@@ -41,3 +41,4 @@ Este projeto é o currículo oficial e portfólio profissional de **Edevaldo das
 - Em português, evite listas de cargos em inglês em títulos de seção (`<h2>`); use uma frase única.
 - **URLs com barra final:** o canonical, o `og:url` e o sitemap usam `/sobre/`, e a Cloudflare Pages redireciona `/sobre` para `/sobre/` (308). Por isso `TrailingSlashUrlSerializer` (registrado em `app.config.ts`) faz os `routerLink` saírem com barra final. Nunca remova o serializador sem padronizar todas as URLs de novo.
 - **Certificados:** `imagemUrl: 'exemplo.jpg'` é o arquivo-modelo e NÃO é exibido (`FormacaoComponent.temImagem`). Para publicar um certificado, salve a imagem real (com dados sensíveis tarjados) em `public/img/` e aponte `imagemUrl` para ela.
+- **Imagem social:** o site NÃO usa `og:image`/`twitter:image` (decisão do proprietário: sem foto) e o `twitter:card` é `summary`. Nunca crie referência a `og-image.jpg` nem a qualquer imagem que não exista em `public/`.
